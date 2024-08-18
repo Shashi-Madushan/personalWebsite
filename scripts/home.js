@@ -93,5 +93,27 @@
         container.appendChild(card);
     });
 
+
+
+    
+    // script.js
+    const text = "Welcome to My Portfolio!";
+    const typingText = document.getElementById('typing-text');
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100); // Adjust the speed by changing the delay (in milliseconds)
+        }
+    }
+
+    window.onload = type;
+
+
+
 })();
+
+
 

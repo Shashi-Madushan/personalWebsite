@@ -67,6 +67,126 @@
             description: 'Description for project 2',
             liveDemo: 'http://example.com/demo2',
             github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Descriptioprojectprojectprojectn for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Descriptioprojectprojectprojectn for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        },
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2 ',
+            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
+        }
+        ,
+        {
+            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
+            title: 'Project 2',
+            description: 'Description for project 2',
+            liveDemo: 'http://example.com/demo2',
+            github: 'http://github.com/repo2'
         }
 
     ];

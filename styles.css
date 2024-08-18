@@ -11,6 +11,7 @@
   --spacing-small: 14px; /* 20px */
   --spacing-medium: 16px; /* 24px */
   --spacing-large: 32px; /* 32px */
+  --sidebar-width: 250px;
   margin: 0;
   padding: 0;
 }
@@ -26,25 +27,26 @@ body {
   background-color: var(--black);
 }
 
+/* Sidebar styles */
 .sidebar {
   position: fixed;
-  top: var(--spacing-small);
+  top: 14px;
   left: 20px;
-  max-width: 250px;
-  max-height: max-content;
+  width: var(--sidebar-width);
   background-color: var(--rich-black);
   color: var(--antiflash-white);
-  padding: 1em;
+  padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: 0 0 5px var(--glow-color);
   transition: box-shadow 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .sidebar:hover {
   box-shadow: 0 0 10px var(--glow-color);
 }
+
 .sidebar-info {
   text-align: center;
   margin-bottom: var(--spacing-medium);
@@ -75,7 +77,7 @@ body {
 
 .title {
   display: inline-block;
-  background-color: var(--celestial-blue);
+  background-color: var(--black);
   color: var(--antiflash-white-2);
   padding: 5px 10px;
   border-radius: 8px;
@@ -83,11 +85,13 @@ body {
   margin-top: 5px;
   margin-bottom: 15px;
   text-align: center;
+  box-shadow: 0 0 8px var(--glow-color);
 }
 
 .separator {
   border-top: 1px solid var(--antiflash-white);
   margin: var(--spacing-medium) 0;
+  box-shadow: 0 0 5px var(--glow-color);
 }
 
 .contacts-list {
@@ -99,18 +103,20 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
+  overflow: hidden;
   margin-bottom: var(--spacing-medium);
 }
 
 .icon-box {
   width: 30px;
   height: 30px;
-  background-color: var(--celestial-blue);
+  background-color: var(--black);
   border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+
+  margin: 0 5px;
 }
 
 .contact-title {
@@ -122,7 +128,7 @@ body {
 .contact-link {
   color: var(--antiflash-white);
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 .contact-info p {
@@ -131,32 +137,30 @@ body {
   color: var(--antiflash-white-2);
 }
 
+/* Main content styles */
 .main-content {
-  margin-left: 290px;
+  margin-left: calc(var(--sidebar-width) + 40px);
   margin-right: 20px;
-  scroll-behavior: smooth;
-  background-color: var(--rich-black);
   margin-top: var(--spacing-small);
-
+  background-color: var(--rich-black);
   border-radius: var(--border-radius);
   box-shadow: 0 0 5px var(--glow-color);
   transition: box-shadow 0.3s ease-in-out;
   max-width: 80vw;
 }
+
 .main-content:hover {
   box-shadow: 0 0 10px var(--glow-color);
 }
 
 .top-bar {
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: flex-end;
 }
 
-.current-page {
+/* .current-page {
   padding: var(--spacing-small);
-}
+} */
 
 .aboutme-text {
   font-size: 1.5625em;
@@ -197,15 +201,12 @@ nav a:active {
   color: var(--rich-black);
 }
 
-section {
-  margin: var(--spacing-small);
-}
-
+/* Card styles */
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 16px;
 }
 
 .card {
@@ -239,6 +240,202 @@ section {
   transform: scale(0.9, 0.9);
 }
 
+.dynamic_section {
+  padding: 0 60px;
+}
+
+.auto-typing {
+  text-align: center;
+  font-size: 2em;
+  color: var(--antiflash-white);
+  margin-top: 20px;
+}
+
+#typing-text::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 section {
-  min-height: 90vh;
+  min-height: 85vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+.icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+.icon-content a:hover {
+  color: white;
+}
+.icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.icon-content a:hover .filled {
+  height: 100%;
+}
+
+.icon-content a[data-social="linkedin"] .filled,
+.icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.icon-content a[data-social="github"] .filled,
+.icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.icon-content a[data-social="instagram"] .filled,
+.icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.icon-content a[data-social="youtube"] .filled,
+.icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 90vw;
+    margin: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: calc(var(--sidebar-width) + 20px);
+    margin-right: 20px;
+  }
+
+  .cards .card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin: auto;
+  }
+
+  .sidebar {
+    position: relative;
+    margin-bottom: var(--spacing-large);
+    width: calc(100% - 40px);
+  }
+
+  .cards .card {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 0 0.625em;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    margin: 25px auto;
+  }
+
+  .sidebar {
+    left: 10px;
+    margin: 5px 10px;
+  }
+
+  .avatar-box {
+    flex-direction: column;
+  }
+
+  .redius {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cards .card {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+
+  .title {
+    font-size: 0.8em;
+  }
 }
