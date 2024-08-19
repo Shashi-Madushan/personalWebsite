@@ -1,5 +1,5 @@
 (function () {
-
+    
 
     const projects = [
         {
@@ -94,25 +94,43 @@
     });
 
 
-
-    
-    // script.js
-    const text = "Welcome to My Portfolio!";
-    const typingText = document.getElementById('typing-text');
-    let index = 0;
+    const texts = ["Hello World!", "Welcome to My Site", "Enjoy Your Stay"];
+    const typingSpeed = 100; // typing speed in ms
+    const erasingSpeed = 50; // erasing speed in ms
+    const delayBetweenTexts = 1500; // delay before typing next text in ms
+    const delayBeforeErasing = 1000; // delay before erasing text in ms
+    let textIndex = 0;
+    let charIndex = 0;
+    let isErasing = false;
 
     function type() {
-        if (index < text.length) {
-            typingText.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 100); // Adjust the speed by changing the delay (in milliseconds)
+        const typingElement = document.getElementById("typing");
+        const currentText = texts[textIndex];
+
+        if (!isErasing) {
+            typingElement.textContent += currentText.charAt(charIndex);
+            charIndex++;
+            if (charIndex < currentText.length) {
+                setTimeout(type, typingSpeed);
+            } else {
+                isErasing = true;
+                setTimeout(type, delayBeforeErasing);
+            }
+        } else {
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex > 0) {
+                setTimeout(type, erasingSpeed);
+            } else {
+                isErasing = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, delayBetweenTexts);
+            }
         }
     }
 
-    window.onload = type;
-
-
-
+    type(); // Start the typing animation
+    
 })();
 
 
